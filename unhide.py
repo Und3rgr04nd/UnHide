@@ -67,7 +67,7 @@ def fetch_cert(domain, output_file=None):
 def main():
     # Use argparse to handle command-line arguments
     parser = argparse.ArgumentParser(description="Fetch certificates from crt.sh")
-    parser.add_argument("-d", "--domain", type=str, help="The domain to query (e.g., example.com)")
+    parser.add_argument("-d", "--domain", type=str, help="The domain to query (e.g., example.com)", required=True)
     parser.add_argument(
         "-s", "--save", type=str, metavar="OUTPUT_FILE",
         help="Save the output to a specified file (optional)"
